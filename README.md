@@ -22,12 +22,9 @@ The notebook is designed to present clear reasoning, well explained methods, and
 ## Problems
 
 ### Problem 1 - Extending  the Lady Tasting Tea Experiment
-
 This problem extends Fisher's *Lady Tasting Tea* experiment.  
-In this experiment, the null hypothesis is that the lady cannot actually taste the difference and any correct answers are due to guessing.
+In this experiment, the null hypothesis is that the lady cannot actually taste the difference and any correct answers are due to guessing. It is the idea that we assume to be true until evidence shows us that it is not. We can reject the null hypothesis when we can prove that something is true. When you see something showing a statistically significant result, you really mean that there was enough evidence provided to reject a null hypothesis.
 
-
-## Add a note on the null hypothesis
 In the original test, the probability of correctly identifying all 4 tea-first cups by chance is:
 
 $$

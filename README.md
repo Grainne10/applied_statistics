@@ -23,7 +23,8 @@ The notebook is designed to present clear reasoning, well explained methods, and
 
 ### Problem 1 - Extending  the Lady Tasting Tea Experiment
 This problem extends Fisher's *Lady Tasting Tea* experiment.  
-In this experiment, the null hypothesis is that the lady cannot actually taste the difference and any correct answers are due to guessing. It is the idea that we assume to be true until evidence shows us that it is not. We can reject the null hypothesis when we can prove that something is true. When you see something showing a statistically significant result, you really mean that there was enough evidence provided to reject a null hypothesis.
+In this experiment, the null hypothesis is that the lady cannot actually taste the difference and any correct answers are due to guessing. It is the idea that we assume to be true until evidence shows us that it is not.  We assume the null hypothesis is true unless the data provide strong evidence against it. When a result is statistically significant, it means the evidence is unlikely to be explained by chance alone, so we reject the null hypothesis.
+
 
 In the original test, the probability of correctly identifying all 4 tea-first cups by chance is:
 
@@ -43,18 +44,13 @@ $$
 P = \frac{1}{495} \approx 0.0020.
 $$
 
-It is much more difficult to get all the cups right in the extended experiment.
+This shows us it is much more difficult to get all cups right in the extended experiment.
 
 To check the exact probability calculation, I simulated the experiment in Python using NumPy.
 In the simulation, the cups were shuffled many times and the lady  “guessed” randomly each time. 
-The simulation result was almost the same as the value we calculated using the formula. The computer experiment confirmed that our mathematical answer was correct.
+The simulation result matched the theoretical probability very closely, confirming our calculation. The computer experiment confirmed that our mathematical answer was correct.
 
-The null hypothesis assumes that the participant is only guessing and has no real ability to tell the difference between tea-first and milk-first cups.
-If this assumption is true, then getting all cups correct should be very unlikely. In the extended 12-cup version, this chance becomes much smaller than in the original 8-cup version. This means the extended experiment provides stronger evidence that her choices are not due to guesswork.
-
+Under the null hypothesis, the participant is only guessing and has no real ability to tell the difference between tea-first and milk-first cups. If this assumption is true, then getting all cups correct should be very unlikely. . In the extended 12-cup version, this chance becomes much smaller (0.2%) than in the original 8-cup version (1.43%). This means the extended experiment provides stronger evidence that a perfect score is not due to guesswork.
 
 
-
-
-
-![statistics](img/statistics.jpg)
+[stats](img/statistics.jpg)

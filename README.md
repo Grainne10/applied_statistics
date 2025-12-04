@@ -52,5 +52,16 @@ The simulation result matched the theoretical probability very closely, confirmi
 
 Under the null hypothesis, the participant is only guessing and has no real ability to tell the difference between tea-first and milk-first cups. If this assumption is true, then getting all cups correct should be very unlikely. . In the extended 12-cup version, this chance becomes much smaller (0.2%) than in the original 8-cup version (1.43%). This means the extended experiment provides stronger evidence that a perfect score is not due to guesswork.
 
+### Problem 2 - Normal Distribution
+
+In this problem, I explored how the standard deviation behaves when sampling from a standard normal distribution. I generated 100,000 samples, each samples containing 10 values. For every sample, I computed two versions of the standard deviation, one using ddof=0 and one using ddof=1(delta degrees of freedom).I plotted the results on a histogram with transparency so that I  can visually compare their sampling distributions.
+
+The results show that when the sample size is small(n=10), the ddof=0 estimator tends to underestimate the true standard deviation of the population. This shows dividing by n does not account for the fact that one degree of freedom is lost when the sample mean is calculated. In contrast , the ddof = 1 divides by n-1, producing slightly larger values on average. This is why its histogram is shifted slightly to the right, and its peak is closer to the true value of 1. This highlights that sample standard deviation ddof = 1 is unbiased and the ddof=0 is biased downward when the sample sizes are small.
+
+To see how sample size affects these estimators , I repeated the simulation with samples of size 100. With the larger sample size, the two histograms overlapped more. Both estimators produced values tightly clustered around 1, and the difference between ddof=0 and ddof=1 were very small. This confirms that as the sample size increases, the impact of the ddof adjustment becomes smaller, and both estimators are closer to the true population standard deviation.
+
+This problem shows our understanding of sampling distributions, bias in estimation and the role of degrees of freedom in statistics. It reinforces the empirical rule and shows how repeated sampling from a distribution behaves in practice.
+
+ 
 
 [stats](img/statistics.jpg)

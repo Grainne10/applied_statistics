@@ -62,6 +62,45 @@ To see how sample size affects these estimators , I repeated the simulation with
 
 This problem shows our understanding of sampling distributions, bias in estimation and the role of degrees of freedom in statistics. It reinforces the empirical rule and shows how repeated sampling from a distribution behaves in practice.
 
+### Problem 3 -  T-tests
+
+In this problem, I explored how Type II error rates behave when performing an independent samples t-test under different true mean differences between two populations. 
+The purpose of this problem is to investigate the relationship between effect size, statistical power, and Type II errors. It demonstrates how sensitive the t-test is to differences between two population means.
+
+Two independent samples were repeatedly drawn, each group had a sample size of n =100 and the experiment was repeated 1000 times:
+Group A was sampled from a standard normal distribution:
+N(0,1)N(0, 1)N(0,1)
+Group B was sampled from a normal distribution with the same variance but a shifted mean:
+N(d,1)N(d, 1)N(d,1)
+A two-sample independent t-test was performed for each simulation at a significance level of α=0.05\alpha = 0.05α=0.05. explain alpha
+Null Hypothesis (H0H_0H0​):
+There is no difference between the population means of Group A and Group B.
+μA=μB\mu_A = \mu_BμA​=μB​
+Hypothesis
+The population means of Group A and Group B are different.
+μA≠μB\mu_A \neq \mu_BμA​=μB​
+When d=0d = 0d=0, both groups come from identical distributions and the null hypothesis is true. As ddd increases, the null hypothesis becomes false, and a real difference between the populations exists.
+
+Type II Error Explanation:
+A Type II error occurs when a hypothesis test fails to reject the null hypothesis even though it is false. This is also known as a false negative.   In this simulation, a Type II error happens when the t-test does not detect a real difference between the two population means when d>0d > 0d>0.
+A real-world example of a Type II error would be a medical test that incorrectly indicates a patient does not have a disease when they actually do. The consequence is that the condition goes untreated. Similarly, in statistics, failing to detect a real effect can lead to incorrect conclusions and poor decision-making.
+
+Results and Interpretation:
+The table of results shows the estimated false negative rate for different values of the true mean difference ddd:
+When d=0d = 0d=0, the null hypothesis is true, and the test correctly fails to reject it most of the time (about 94%).
+For small values of ddd (e.g., 0.1 or 0.2), the false negative rate is still high. This means the t-test struggles to distinguish between the two populations when the difference is subtle.
+As ddd increases, the false negative rate decreases rapidly.
+For larger values of ddd (around 0.7 and above), the false negative rate approaches zero, indicating that the t-test almost always detects the real difference.
+This behavior shows that the power of the t-test increases as the true effect size increases. Power is defined as 1−Type II error rate1 - \text{Type II error rate}1−Type II error rate, so lower false negative rates correspond to higher power.
+The plot visualizes the relationship between true mean difference (effect size ddd) and the Type II error rate. This  shows a steep decline in false negatives as ddd increases. When the populations are very similar, the test frequently misses the effect. As the populations become more separated, the test becomes more reliable.
+This visualization reinforces the idea that statistical tests are not equally sensitive to all effect sizes. Detecting small effects requires larger sample sizes or more powerful testing strategies.
+
+Conclusion
+
+This problem demonstrates how Type II errors depend strongly on effect size and illustrates the practical limitations of hypothesis testing. While the t-test performs well for moderate to large differences, it can miss small but real effects. Understanding this tradeoff is essential in real-world applications such as scientific research, psychology, and medical testing, where failing to detect a true effect can have serious consequences.
+
+# a Review and comment
+
  
 
 [stats](img/statistics.jpg)

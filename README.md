@@ -100,7 +100,9 @@ Conclusion
 This problem demonstrates how Type II errors depend strongly on effect size and illustrates the practical limitations of hypothesis testing. While the t-test performs well for moderate to large differences, it can miss small but real effects. Understanding this tradeoff is essential in real-world applications such as scientific research, psychology, and medical testing, where failing to detect a true effect can have serious consequences.
 
 # a Review and comment
-
+### Problem 4 - ANOVA
  
+----------------------------------------
+END
 
-[stats](img/statistics.jpg)
+![stats](img/statistics.jpg)

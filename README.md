@@ -69,7 +69,7 @@ The purpose of this problem is to investigate the relationship between effect si
 
 Two independent samples were repeatedly drawn, each group had a sample size of n =100 and the experiment was repeated 1000 times:
 Group A was sampled from a standard normal distribution:
-N(0,1)N(0, 1)N(0,1)
+N(0,1)N(0,1)N(0,1)
 Group B was sampled from a normal distribution with the same variance but a shifted mean:
 N(d,1)N(d, 1)N(d,1)
 A two-sample independent t-test was performed for each simulation at a significance level of α=0.05\alpha = 0.05α=0.05. explain alpha
@@ -105,4 +105,4 @@ This problem demonstrates how Type II errors depend strongly on effect size and 
 ----------------------------------------
 END
 
-![stats](img/statistics.jpg)
+![statistics](img/statistics.jpg)

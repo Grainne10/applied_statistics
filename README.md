@@ -99,10 +99,25 @@ Conclusion
 
 This problem demonstrates how Type II errors depend strongly on effect size and illustrates the practical limitations of hypothesis testing. While the t-test performs well for moderate to large differences, it can miss small but real effects. Understanding this tradeoff is essential in real-world applications such as scientific research, psychology, and medical testing, where failing to detect a true effect can have serious consequences.
 
-# a Review and comment
 ### Problem 4 - ANOVA
+
+In this problem, I investigate the difference between using a one-way ANOVA and multiple two-sample t-tests when comparing more that two group means.
+Three independependent samples, each of size 30, were generated from normal distributions with standard deviation 1 and means od 0,0.5, and 1, respectively. Using these samples:  
+- A one-way ANOVA was performed to test the null hypothesis that all three population means are equal. 
+- Three indendepent two sample t-tests were conducted to compare each pair of samples(A vs B, A vs C and B vs C)
+- A Tukey's HSD post-hoc test was applied following the ANOVA to inderify which specific group means differed.
+- A boxplot was created to visually compart the distributions of the three samples.
+
+This problem demonstrates how one-way Anova provides a single global test for detecting differnences among multiple group means while controlling the overall Type I error rate. Although multiple t-tests can indentify pairwise differences, running several t-tests increases the probabilities of false positives.
+In this example, the ANOVA indicated a statistically significant difference among the three group means. Using Tukey's HSE and pairwise t-tests showed that the significant difference was driven by the comparison between the samples with means 0.5 and 1(sample_b and sample_c). The other pairwise comparisons were not statistically significant.
+ANOVA is preferred over multiple t-tests. Running multiple t-tests without a global test increases the risk of false positives. This is called family-wise error rate.As the result is consistent across all methods, this significant result is unlikely to be a false positive.
+ANOVA is preferred over multiple t-tests. Running multiple t-tests without a global test increases the risk of false positives. This is called family-wise error rate.
+FWER = 1 − (1 − 0.05)^3 ≈ 0.143 (14.3% chance of at least one false positive)
+This shows that running three t-tests at α = 0.05 increases the probability of obtaining at least one false positive to about 14%, even if all null hypotheses are true.
+
  
 ----------------------------------------
 END
-
 ![statistics](img/statistics.jpg)
+
+

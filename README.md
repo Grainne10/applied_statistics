@@ -19,16 +19,17 @@ The assessment covers four problems:
 - Sampling variability under the normal distribution
 - Analysing type II error rates in t-tests
 - Comparing ANOVA with multiple pairwise tests.  
+
 The notebook is designed to present clear reasoning, well explained methods, and results that reflect both the statistical theory and what I’ve learned in the course.  
 
-## Contents
+## Contents  
 `problems.ipynb`: A Jupyter notebook with an explanation of how I completed the tasks, including command usage and data analysis.  
 `README.md`: Provides an overview of the project, explains its purpose, and describes how to run the code in this repository.  
-`img/`: A directory containing images used in the project
-`requirements`: A text file listing the dependencies required to run the project, including libraries such as pandas and jupyter. 
-`.gitignore`: Specifies files and directories that should be ignored by Git.   
+`img/`: A directory containing images used in the project.  
+`requirements`: A text file listing the dependencies required to run the project, including libraries such as pandas and jupyter.   
+`.gitignore`: Specifies files and directories that should be ignored by Git.     
 
-## Installation
+## Installation  
 
 To run this project, Python and Jupyter Notebook must be installed on your system.
 All required Python packages are listed in the `requirements.txt` file.

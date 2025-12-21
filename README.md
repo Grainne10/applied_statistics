@@ -2,12 +2,11 @@
 Coursework for Applied Statistics - Data Analytics
 **by Grainne Boyle**
 
-![teaimage](img/tea.jpg)
-
 **README Content:**
 
 1. [Overview](README.md/#overview)
 2. [Contents](README.md/#contents)
+3. [Installation](README.md/#installation)
 3. [Problems](README.md/#problems)
 4. [Research](README.md/#research)
 
@@ -23,11 +22,20 @@ The assessment covers four problems:
 The notebook is designed to present clear reasoning, well explained methods, and results that reflect both the statistical theory and what I’ve learned in the course.  
 
 ## Contents
-`problems.ipynb`: A a Jupyter notebook with an explanation of how I completed the tasks, including command usage and data analysis.  
+`problems.ipynb`: A Jupyter notebook with an explanation of how I completed the tasks, including command usage and data analysis.  
 `README.md`: Provides an overview of the project, explains its purpose, and describes how to run the code in this repository.  
-`img/`: An image folder containing images I used in the project.  
-`requirements/`: A text file listing the dependencies required to run the project, including libraries such as pandas and jupyter.  
+`img/`: A directory containing images used in the project
+`requirements`: A text file listing the dependencies required to run the project, including libraries such as pandas and jupyter. 
+`.gitignore`: Specifies files and directories that should be ignored by Git.   
 
+## Installation
+
+To run this project, Python and Jupyter Notebook must be installed on your system.
+All required Python packages are listed in the `requirements.txt` file.
+First, clone or download this repository to your local machine.
+Next, open a terminal in the project directory and install the required dependencies using `pip install -r requirements.txt`.
+Once the dependencies are installed, start `jupyter notebook` by running jupyter notebook.
+Finally, open the project notebook and run the cells from top to bottom to reproduce the analysis and results.
 
 ## Problems
 
@@ -72,7 +80,7 @@ This problem demonstrates key ideas related to sampling distributions, estimator
 ### Problem 3 -  T-tests
 
 In this problem, the focus is on understanding **Type II error rates** and how they are affected by the size of the true mean differences between populations.  Simulation was used to investigate how often an independent samples t-test fails to detect a real difference between two population means.   
-Two independent samples were repeatedly drawn, each group had a sample size of `n = 100`. One sample was drawn from a standard normal distribution,`N(0, 1)`, while the second sample was drawn from a normal distribution with the same variance but with its mean shifted by a value `d`, that is `N(d, 1)`. The value of `d` was varied from `0` to `1` in increments of `0.1` to represent increasing differences between the populaion means.     
+Two independent samples were repeatedly drawn, each group had a sample size of `n = 100`. One sample was drawn from a standard normal distribution,`N(0, 1)`, while the second sample was drawn from a normal distribution with the same variance but with its mean shifted by a value `d`, that is `N(d, 1)`. The value of `d` was varied from `0` to `1` in increments of `0.1` to represent increasing differences between the population means.     
 For each value of `d`, the experiment was repeated 1000 times. In each simulation, a two-sample independent t-test was performed for each simulation at a significance level of `α = 0.05`. The null hypothesis stated that there is no difference between the population means of the two groups,`H₀: μ_A = μ_B`, while the alternative hypothesis
 stated that the population means are different, `H₁: μ_A ≠ μ_B`.  
 When `d = 0`, both samples come from identical distributions and the null hypothesis is true. As `d` increases, a real difference between the populations means differ and the null hypothesis becomes false. A **Type II error** occurs when the test fails to reject the null hypothesis even though this real difference is present.  
@@ -95,25 +103,25 @@ Overall, this problem demonstrates that `ANOVA` is a more appropriate and reliab
 
 
 ## Research
-1. [Lady tasting tea](https://en.wikipedia.org/wiki/Lady_tasting_tea) - This explains where this test originated.  
-2. ​[LaTeX Math in Jupyter Documentation](https://jupyterbook.org/en/stable/content/math.html) - I used this in my jupyter notebook to improve the appearance of formulas etc.  
-3. [NullHypothesis](https://www.youtube.com/watch?v=DAkJhY2zQ3c) - This video explains very clearly what the null hypothesis, statistical significance and p-value are.  
-4. [Random seed](https://www.w3schools.com/python/ref_random_seed.asp) - Used random seeds in my Lady Tasting Tea function.  
-5. [Random seeds and reproducibility](https://medium.com/data-science/random-seeds-and-reproducibility-933da79446e3) - Article about random seeds and reproducibility.   
-6. [DocStrings]( https://www.geeksforgeeks.org/python/python-docstrings/) –  A `docstring` is a string literal placed at the beginning of a function, class, or module.  
-7. [P-values](https://www.youtube.com/watch?v=vemZtEM63GY) - This  video explains the concept of p-values and statistical significance.  
-8. [KDE](https://www.geeksforgeeks.org/data-science/seaborn-kdeplot-a-comprehensive-guide/) - Understanding the KDE plot.  
-9. [Type II Error](https://corporatefinanceinstitute.com/resources/data-science/type-ii-error/#:~:text=%22False%20negative%22%20error,Increase%20the%20sample%20size) - Explains a Type II error.  
-10.[ANOVA](https://www.youtube.com/watch?v=0NwA9xxxtHw) - this video explains that Anova is a test that can be used when there are more than two samples.  
-11.[Anova v t-tests](https://www.geeksforgeeks.org/data-science/difference-between-t-test-and-anova/) - explains the difference between these approaches.   
-12.[Type 1 error](https://corporatefinanceinstitute.com/resources/data-science/type-i-error/) occurs when a test incorrectly rejects a true null hypothesis.  
-13.[f-statistic](https://www.machinelearningplus.com/statistics/f-statistic-formula-explained/) - This article explains how the F-statisic compares how much the group means differ from each other (between-groups variability) to how much variation exists within each group.  
-14.[Boxplots](https://www.youtube.com/watch?v=nV8jR8M8C74) - This video provides a clear explanation of boxplots, including how to interpret the minimum, first quartile, median, third quartile, maximum values and the outliers or whiskers.  
-15.[CHATGPT](https://chatgpt.com/) - I used these AI tools for some guidance and re-wording on my project. All thoughts and ideas are my own, I spent alot of time researching and reading up on all the topics in the project.  
+1.  [Lady tasting tea](https://en.wikipedia.org/wiki/Lady_tasting_tea) - This explains where this test originated.  
+2.  ​[LaTeX Math in Jupyter Documentation](https://jupyterbook.org/en/stable/content/math.html) - I used this in my jupyter notebook to improve the appearance of formulas etc.  
+3.  [NullHypothesis](https://www.youtube.com/watch?v=DAkJhY2zQ3c) - This video explains very clearly what the null hypothesis, statistical significance and p-value are.  
+4.  [Random seed](https://www.w3schools.com/python/ref_random_seed.asp) - Used random seeds in my Lady Tasting Tea function.  
+5.  [Random seeds and reproducibility](https://medium.com/data-science/random-seeds-and-reproducibility-933da79446e3) - Article about random seeds and reproducibility.   
+6.  [DocStrings]( https://www.geeksforgeeks.org/python/python-docstrings/) –  A `docstring` is a string literal placed at the beginning of a function, class, or module.  
+7.  [P-values](https://www.youtube.com/watch?v=vemZtEM63GY) - This  video explains the concept of p-values and statistical significance.  
+8.  [KDE](https://www.geeksforgeeks.org/data-science/seaborn-kdeplot-a-comprehensive-guide/) - Understanding the KDE plot.  
+9.  [Type II Error](https://corporatefinanceinstitute.com/resources/data-science/type-ii-error/#:~:text=%22False%20negative%22%20error,Increase%20the%20sample%20size) - Explains a Type II error.  
+10. [ANOVA](https://www.youtube.com/watch?v=0NwA9xxxtHw) - this video explains that Anova is a test that can be used when there are more than two samples.  
+11. [Anova v t-tests](https://www.geeksforgeeks.org/data-science/difference-between-t-test-and-anova/) - explains the difference between these approaches.   
+12. [Type 1 error](https://corporatefinanceinstitute.com/resources/data-science/type-i-error/) occurs when a test incorrectly rejects a true null hypothesis.  
+13. [f-statistic](https://www.machinelearningplus.com/statistics/f-statistic-formula-explained/) - This article explains how the F-statisic compares how much the group means differ from each other (between-groups variability) to how much variation exists within each group.  
+14. [Boxplots](https://www.youtube.com/watch?v=nV8jR8M8C74) - This video provides a clear explanation of boxplots, including how to interpret the minimum, first quartile, median, third quartile, maximum values and the outliers or whiskers.  
+15. [CHATGPT](https://chatgpt.com/) - I used these AI tools for some guidance and re-wording on my project. All thoughts and ideas are my own, I spent alot of time researching and reading up on all the topics in the project.  
 
 
 ----------------------------------------
 END
 
-![statistics](img/statistics.jpg)
+![teaimage](img/tea.jpg)
 
